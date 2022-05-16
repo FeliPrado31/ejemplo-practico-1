@@ -1,16 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import { Count } from './components/count';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
-      <h1>Contador</h1>
-      <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>+1</button>
-      <button onClick={() => setCount(count - 1)}> -1</button>
+      <Count count={count} setCount={setCount} />
     </div >
   );
 }
